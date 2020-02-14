@@ -2,7 +2,7 @@ package Lesson_1;
 
 import org.springframework.stereotype.Component;
 
-@Component("doctor")
+@Component("therapist")
 public class Therapist implements Doctor {
     private Card card;
 

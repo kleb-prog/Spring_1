@@ -1,10 +1,17 @@
 package Lesson_1;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
+
+//        --== AppConfig ==--
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Reception reception = context.getBean("reception", Reception.class);
+        Doctor doctor = reception.makeDoctorAppointment();
+        doctor.visitDoctor();
 
 
 //      --== XML Spring ==--
