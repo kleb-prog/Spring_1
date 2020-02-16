@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- bean definitions here -->
+
+<!--    <bean id="doctor" class="Lesson_1.Therapist" scope="prototype"></bean>-->
+
+<!--    <bean id="cardLibrary" class="Lesson_1.CardLibrary" scope="prototype"></bean>-->
+    <context:component-scan base-package="Lesson_1"/>
+
+    <bean id="reception" class="Lesson_1.Reception" scope="prototype">
+        <property name="doctor">
+            <ref bean="doctor"/>
+        </property>
+        <property name="cardLibrary">
+            <ref bean="cardLibrary"/>
+        </property>
+    </bean>
+
+</beans>
