@@ -9,9 +9,9 @@
 
     <!-- bean definitions here -->
 
-<!--    <bean id="doctor" class="Lesson_1.Therapist" scope="prototype"></bean>-->
+    <bean id="doctor" class="Lesson_1.Therapist" scope="prototype"></bean>
 
-<!--    <bean id="cardLibrary" class="Lesson_1.CardLibrary" scope="prototype"></bean>-->
+    <bean id="cardLibrary" class="Lesson_1.CardLibrary" scope="prototype"></bean>
     <context:component-scan base-package="Lesson_1"/>
 
     <bean id="reception" class="Lesson_1.Reception" scope="prototype">
