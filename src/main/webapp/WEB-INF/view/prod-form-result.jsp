@@ -15,5 +15,7 @@ Product title: ${product.title}
 <br>
 Product cost: ${product.cost}
 <br>
+
+<a href="http://localhost:8189/product/showForm">Back to form</a>
 </body>
 </html>
