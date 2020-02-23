@@ -8,22 +8,22 @@ public class Main {
     public static void main(String[] args) {
 
 //        --== AppConfig ==--
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+//        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+//        Reception reception = context.getBean("reception", Reception.class);
+//        Doctor doctor = reception.makeDoctorAppointment();
+//        doctor.visitDoctor();
+
+
+//      --== XML Spring ==--
+        ApplicationContext context = new ClassPathXmlApplicationContext("resources/config.xml");
         Reception reception = context.getBean("reception", Reception.class);
         Doctor doctor = reception.makeDoctorAppointment();
         doctor.visitDoctor();
 
-
-//      --== XML Spring ==--
-//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-//        Reception reception = context.getBean("reception", Reception.class);
-//        Doctor doctor = reception.makeDoctorAppointment();
-//        doctor.visitDoctor();
-//
-//        Reception reception2 = context.getBean("reception", Reception.class);
-//        Doctor doctor2 = reception2.makeDoctorAppointment();
-//        doctor2.visitDoctor();
-//        System.out.println(doctor == doctor2);
+        Reception reception2 = context.getBean("reception", Reception.class);
+        Doctor doctor2 = reception2.makeDoctorAppointment();
+        doctor2.visitDoctor();
+        System.out.println(doctor == doctor2);
 
 //        --== Without Spring ==--
 //        Reception reception = new Reception();
