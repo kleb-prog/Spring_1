@@ -15,7 +15,7 @@ public class Main {
 
 
 //      --== XML Spring ==--
-//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("resources/config.xml");
 //        Reception reception = context.getBean("reception", Reception.class);
 //        Doctor doctor = reception.makeDoctorAppointment();
 //        doctor.visitDoctor();
