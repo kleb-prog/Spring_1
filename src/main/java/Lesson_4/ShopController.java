@@ -14,9 +14,14 @@ public class ShopController {
     private ProductService productService;
 
     @Autowired
-    public ShopController(ProductService productService) {
+    public void setProductService(ProductService productService) {
         this.productService = productService;
     }
+
+//    @Autowired
+//    public ShopController(ProductService productService) {
+//        this.productService = productService;
+//    }
 
     @GetMapping("")
     public String mainPage(Model model) {
