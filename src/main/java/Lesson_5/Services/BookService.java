@@ -1,5 +1,7 @@
-package Lesson_5;
+package Lesson_5.Services;
 
+import Lesson_5.Book;
+import Lesson_5.Repo.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
