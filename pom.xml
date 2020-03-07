@@ -15,6 +15,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -22,7 +23,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>5.1.2.RELEASE</spring.version>
-        <jetty.version>9.2.26.v20180806</jetty.version>
+<!--        <jetty.version>9.2.26.v20180806</jetty.version>-->
         <spring.security.version>5.0.7.RELEASE</spring.security.version>
     </properties>
 
@@ -75,18 +76,24 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>${jetty.version}</version>
+            <version>9.4.27.v20200227</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>${jetty.version}</version>
+            <version>9.4.27.v20200227</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-jsp</artifactId>
-            <version>${jetty.version}</version>
+            <version>9.2.29.v20191105</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>9.4.27.v20200227</version>
+        </dependency>
+
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -154,11 +161,6 @@
             <version>3.0.10.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-            <version>3.0.3.RELEASE</version>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
@@ -178,11 +180,11 @@
             <artifactId>font-awesome</artifactId>
             <version>5.5.0</version>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.flywaydb</groupId>-->
-        <!--<artifactId>flyway-core</artifactId>-->
-        <!--<version>5.2.1</version>-->
-        <!--</dependency>-->
+<!--        <dependency>-->
+<!--        <groupId>org.flywaydb</groupId>-->
+<!--        <artifactId>flyway-core</artifactId>-->
+<!--        <version>5.2.1</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -191,28 +193,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.flywaydb</groupId>-->
-<!--                <artifactId>flyway-maven-plugin</artifactId>-->
-<!--                <version>5.2.1</version>-->
-<!--                <configuration>-->
-<!--                    <url>jdbc:mysql://localhost:3306/geek_market?useSSL=false</url>-->
-<!--                    <user>geek</user>-->
-<!--                    <password>geek</password>-->
-<!--                    <schemas>-->
-<!--                        <schema>geek_market</schema>-->
-<!--                    </schemas>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 
     <build>
         <resources>
@@ -268,7 +248,19 @@
                     </archive>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.flywaydb</groupId>-->
+<!--                <artifactId>flyway-maven-plugin</artifactId>-->
+<!--                <version>5.2.1</version>-->
+<!--                <configuration>-->
+<!--                    <url>jdbc:mysql://localhost:3306/geek_market?useSSL=false</url>-->
+<!--                    <user>geek</user>-->
+<!--                    <password>geek</password>-->
+<!--                    <schemas>-->
+<!--                        <schema>geek_market</schema>-->
+<!--                    </schemas>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
-
 </project>
