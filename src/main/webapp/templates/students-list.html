@@ -24,7 +24,7 @@
         <thead>
         <tr class="thead-dark">
             <td>Id</td>
-			<td>Photo</td>
+            <td>Photo</td>
             <td>Name</td>
             <td>Actions</td>
         </tr>
@@ -32,7 +32,7 @@
 
         <tr class="myTableRow responsive-row" th:each="student : ${studentsList}" th:attr="entryIndex=${student.id}">
             <td th:text="${student.id}"/>
-            <td><img width="40px" th:src="@{'/images/' + ${student.name} + '.jpg'}" alt="student photo"/><td/>
+            <td><img width="40px" th:src="@{'/images/' + ${student.name} + '.jpg'}" alt="student photo"/></td>
             <td th:text="${student.name}"/>
             <td>
                 <a class="btn btn-primary" th:href="@{'/students/courses/' + ${student.id}}" role="button">Courses Info</a>
