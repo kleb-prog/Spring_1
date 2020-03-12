@@ -224,7 +224,7 @@
                 <targetPath>..</targetPath>
             </resource>
         </resources>
-        <finalName>jetty-example</finalName>
+        <finalName>dockerTry</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -260,7 +260,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Lesson_5.Security.Launcher</mainClass>
+                            <mainClass>Lesson_7.GeekspringApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

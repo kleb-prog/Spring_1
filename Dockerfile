@@ -1,6 +1,6 @@
 FROM openjdk:12-alpine
 
-COPY target/BookingApp-*.jar /BookingApp.jar
-COPY ./mydb.db ./mydb.db
+COPY target/dockerTry.jar /BookingApp.jar
+COPY ./dbLite.db ./dbLite.db
 
 CMD ["java", "-jar", "/BookingApp.jar"]
