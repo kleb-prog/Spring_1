@@ -192,6 +192,23 @@
             <version>1.18.4</version>
             <scope>provided</scope>
         </dependency>
+
+<!--        rabbit-->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.25.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -207,7 +224,7 @@
                 <targetPath>..</targetPath>
             </resource>
         </resources>
-        <finalName>jetty-example</finalName>
+        <finalName>dockerTry</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -243,7 +260,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Lesson_5.Security.Launcher</mainClass>
+                            <mainClass>Lesson_7.GeekspringApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

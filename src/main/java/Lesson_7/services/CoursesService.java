@@ -25,9 +25,14 @@ public class CoursesService {
 
     public Course getCourseById(Long id) {
         Optional<Course> course = coursesRepository.findById(id);
-        if (course.isPresent()) {
-            return course.get();
-        }
-        return null;
+        return course.orElse(null);
+    }
+
+    public Course addOrUpdateCourse(Course course) {
+        return coursesRepository.save(course);
+    }
+
+    public void removeCourse(Long courseId) {
+        coursesRepository.deleteById(courseId);
     }
 }
